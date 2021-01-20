@@ -1,5 +1,9 @@
 .todo-container2 {
   width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 20px;
+  flex-wrap: wrap;
 }
 
 .todo {
@@ -18,14 +22,6 @@
   
 }
 
-.todo-title {
-  /* justify-content: left; */
-}
-
-.todo-btns {
-  /* justify-content: right; */
-}
-
 .btn {
   margin: 5px;  
 }
@@ -35,4 +31,9 @@
   width: 100%;
   padding: 5px 20px;
   
+}
+
+.completed {
+  text-decoration: line-through;
+  color: dimgray;
 }

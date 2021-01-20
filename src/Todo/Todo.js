@@ -4,32 +4,21 @@ import "./todo.css";
 
 class Todo extends Component {
 	state = {
-		titleText: "line-through",
-		isLineThrough: false,
-		isEditEnable: false,
-		style: {
-			textDecoration: "line-through",
-			color: "gray",
-		},
+    isEditEnable: false,
+    isCompleted: this.props.completed
 	};
 
 	handleTitleClick = (evt) => {
-		console.log(evt.target);
-		console.log(this.state.isLineThrough);
-		if (!this.state.isLineThrough) {
-			evt.target.style.textDecoration = this.state.style.textDecoration;
-			evt.target.style.color = this.state.style.color;
-		} else {
-			evt.target.removeAttribute("style");
-		}
-		console.log(this.state.isLineThrough);
 		this.setState({
-			isLineThrough: !this.state.isLineThrough,
-		});
+			isCompleted: !this.state.isCompleted,
+    }, () => {
+      this.props.completedTodo(this.state.isCompleted, this.props.id);
+    });
+    
 	};
 
 	OnClickEdit = () => {
-		console.log();
+		// console.log();
 		this.setState({
 			isEditEnable: true,
 		});
@@ -37,11 +26,6 @@ class Todo extends Component {
 
 	OnClickDelete = (key) => {
 		this.props.removeTodo(key);
-	};
-
-	handleUpdate = (evt) => {
-		evt.preventDefault();
-		console.log(evt.task.value);
 	};
 
 	handleOnCancel = () => {
@@ -77,22 +61,27 @@ class Todo extends Component {
 		} else {
 			result = (
 				<React.Fragment>
-					<div className="todo-title" onClick={this.handleTitleClick}>
-						{this.props.title}
-					</div>
-					<div className="todo-btns">
-						<button
-							className="btn btn-sm btn-outline-danger"
-							onClick={this.OnClickEdit}
+					<div className="todo-container2">
+						<div
+							className={this.state.isCompleted ? "completed" : ""}
+							onClick={this.handleTitleClick}
 						>
-							Edit
-						</button>
-						<button
-							className="btn btn-sm btn-outline-danger"
-							onClick={() => this.OnClickDelete(this.props.id)}
-						>
-							Delete
-						</button>
+							{this.props.title}
+						</div>
+						<div className="todo-btns">
+							<button
+								className="btn btn-sm btn-outline-danger"
+								onClick={this.OnClickEdit}
+							>
+								Edit
+							</button>
+							<button
+								className="btn btn-sm btn-outline-danger"
+								onClick={() => this.OnClickDelete(this.props.id)}
+							>
+								Delete
+							</button>
+						</div>
 					</div>
 				</React.Fragment>
 			);
