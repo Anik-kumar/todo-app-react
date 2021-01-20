@@ -7,11 +7,17 @@
 }
 
 .input-field {
-  /* width: 50%; */
   margin: 5px;
 }
 
 .form-group {
   display: flex;
   justify-content: center;
+}
+
+.new-todo-form-header {
+  width: 75%;
+  margin: auto;
+  padding-top: 10px;
+  border-top: 1px solid lightskyblue;
 }

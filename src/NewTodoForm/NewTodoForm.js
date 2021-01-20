@@ -16,8 +16,8 @@ class NewTodoForm extends Component {
 	render() {
 		return (
 			<div className="new-todo-form">
-				<h5>New Todo</h5>
-				<form action="" className="todo-form" onSubmit={this.formSubmit}>
+				<h5 className="new-todo-form-header">New Todo</h5>
+				<form className="todo-form" onSubmit={this.formSubmit}>
 					<div className="form-group">
 						<input
 							type="text"

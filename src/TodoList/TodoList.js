@@ -60,7 +60,7 @@ class TodoList extends Component {
 	render() {
 		return (
 			<div className="todolist">
-				<h2>Todo List</h2>
+				<h2 className="todolist-header">Todo List</h2>
 				<div className="todolist-todo-container">
 					{this.state.todos.map((todo) => (
 						<Todo

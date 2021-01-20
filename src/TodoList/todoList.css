@@ -9,12 +9,20 @@
 .todolist-todo-container {
   width: 100%;
   margin: auto;
+  padding-top: 10px;
 }
 
 .todolist-todo-form-container{
   width: 100%;
   margin: auto;
 }
+
+.todolist-header {
+  border-bottom: 1px solid lightskyblue;
+  width: 70%;
+  margin: auto;
+}
+
 @media(max-width: 1200px) {
   .todolist {
     width: 40%;
