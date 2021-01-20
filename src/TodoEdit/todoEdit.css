@@ -1,0 +1,12 @@
+.todoedit {
+  flex: 1;
+}
+
+.edit-input {
+  
+}
+
+.todoedit-form {
+  display: flex;
+  /* margin-left: 20px; */
+}

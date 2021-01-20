@@ -1,0 +1,40 @@
+.todolist {
+  width: 35%;
+  margin: 50px auto;
+  background-color: #00b3b3;
+  border-radius: 10px;
+  padding: 12px 0 0 0;
+}
+
+.todolist-todo-container {
+  width: 100%;
+  margin: auto;
+}
+
+.todolist-todo-form-container{
+  width: 100%;
+  margin: auto;
+}
+@media(max-width: 1200px) {
+  .todolist {
+    width: 40%;
+  }
+}
+
+@media(max-width: 1000px) {
+  .todolist {
+    width: 48%;
+  }
+}
+
+@media(max-width: 600px) {
+  .todolist {
+    width: 65%;
+  }
+}
+
+@media(max-width: 500px) {
+  .todolist {
+    width: 75%;
+  }
+}

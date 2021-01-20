@@ -1,0 +1,17 @@
+.new-todo-form {
+  padding: 1rem;
+}
+
+.todo-form {
+  margin: auto;
+}
+
+.input-field {
+  /* width: 50%; */
+  margin: 5px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+}
